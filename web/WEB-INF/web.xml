@@ -71,6 +71,16 @@
         <url-pattern>/OrderServlet</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>PrivilegeFilter</filter-name>
+        <filter-class>com.own.store.web.filter.PrivilegeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>PrivilegeFilter</filter-name>
+        <url-pattern>/jsp/cart.jsp</url-pattern>
+        <url-pattern>/jsp/order_info.jsp</url-pattern>
+        <url-pattern>/jsp/order_list.jsp</url-pattern>
+    </filter-mapping>
 
     //session设置为永不失效
     <session-config>

@@ -121,6 +121,9 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public void updateOrder(Order order) throws Exception {
-
+        String sql = "update orders set ordertime = ?, total = ?,state = ?,address = ?,name = ?,telephone = ? where oid = ? ";
+        QueryRunner qr = new QueryRunner(JDBCUtils.getDataSource());
+        Object[] params = {order.getOrdertime(),order.getTotal(),order.getState(),order.getAddress(),order.getName(),order.getTelephone(),order.getOid()};
+        qr.update(sql,params);
     }
 }

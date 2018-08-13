@@ -51,7 +51,7 @@
 							<c:forEach items="${order.list}" var="item">
 								<tr class="active">
 									<td width="60" width="40%">
-										<input type="hidden" name="id" value="22">
+										<input type="hidden" name="id" value="${item.product.pid}">
 										<img src="${pageContext.request.contextPath}/${item.product.pimage}" width="70" height="60">
 									</td>
 									<td width="30%">
