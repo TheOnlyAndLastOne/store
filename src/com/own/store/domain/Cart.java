@@ -27,6 +27,11 @@ public class Cart {
         }
     }
 
+    //返回map中所有的值
+    public Collection<CartItem> getCartItems(){
+        return map.values();
+    }
+
     //删除
     public void removeCartItem(String pid){
         map.remove(pid);

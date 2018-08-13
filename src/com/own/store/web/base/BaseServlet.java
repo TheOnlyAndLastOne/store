@@ -42,7 +42,7 @@ public class BaseServlet extends HttpServlet {
 
 
 	// 默认方法
-	public String execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException {
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		return null;
 	}
 
